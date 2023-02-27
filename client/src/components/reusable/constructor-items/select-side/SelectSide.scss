@@ -1,0 +1,53 @@
+@import "../../../../variables";
+
+.select-side {
+    display: flex;
+    margin-bottom: 28px;
+    gap: 20px;
+
+    .side {
+        cursor: pointer;
+        border-radius: 6px;
+        @include flex_center;
+        flex-direction: column;
+        padding: 20px 29px;
+        border: 1px solid transparent;
+        background-color: #fff;
+
+        .title {
+            @include plain-text_font(600);
+            margin-bottom: 12px
+        }
+
+        .product-photo {
+            @include flex_center;
+
+            .photo-img {
+                max-width: 83px;
+                max-height: 95px;
+            }
+        }
+    }
+
+    .side.active {
+        border: 1px solid #9DD0FF;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .select-side {
+        margin-top: 32px;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+    .select-side {
+        .side {
+            .title {
+                font-size: 12px;
+            }
+        }
+    }
+}

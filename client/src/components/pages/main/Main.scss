@@ -1,0 +1,56 @@
+@import "../../../variables";
+
+.main {
+    position: relative;
+    padding-top: 350px;
+    padding-bottom: 120px;
+
+    .background {
+        position: absolute;
+        z-index: -10;
+    }
+
+    .background:first-child {
+        opacity: 0.4;
+        left: 45%;
+        top: -293px;
+    }
+
+    .background:nth-child(2) {
+        opacity: 0.3;
+        top: 36%;
+        left: -1145px;
+    }
+
+    .background:last-child {
+        opacity: 0.3;
+        left: 722px;
+        bottom: -129px;
+    }
+
+}
+
+@media screen and (max-width: 940px) {
+    .main {
+        padding: $padding_width-940;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        .background:first-child {
+            left: 33%;
+            top: 336px;
+        }
+
+        .background:nth-child(2) {
+            top: 39%;
+            left: -342px;
+        }
+
+        .background:last-child {
+            left: 360px;
+            bottom: 691px;
+        }
+    }
+}

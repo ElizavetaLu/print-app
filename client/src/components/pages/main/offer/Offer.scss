@@ -1,0 +1,108 @@
+@import "../../../../variables";
+
+.offer {
+    display: none;
+}
+
+@media screen and (max-width: 940px) {
+    .offer {
+        box-sizing: border-box;
+        @include flex_align-center;
+        justify-content: center;
+        width: 100%;
+        background: linear-gradient(118.39deg, #4EA9FD -29.01%, #2A89E1 125.57%);
+        border-radius: 24px;
+        padding: 39px 50px;
+        position: relative;
+        margin-top: 107px;
+        margin-bottom: 100px;
+
+        .tShirt {
+            position: absolute;
+            left: -47px;
+            top: -46px;
+            transform: rotate(-6.56deg);
+
+            .tShirt-img {
+                height: 300px;
+            }
+        }
+
+        .info {
+            margin-left: 75px;
+            color: $main-light_text-color;
+
+            .h3 {
+                margin-bottom: 20px;
+                @include h3_font;
+            }
+
+            .text {
+                @include plain-text_font(400);
+                margin-bottom: 10px;
+            }
+
+            .code {
+                @include plain-text_font(400);
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .offer {
+        min-height: 270px;
+        justify-content: center;
+        align-items: flex-start;
+
+        .tShirt {
+            left: 30%;
+            top: 140px;
+
+            .tShirt-img {
+                height: 181.96px;
+            }
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info {
+            margin-left: 0px;
+
+            .h3 {
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+            }
+
+            .text {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                margin-bottom: 6px;
+            }
+
+            .code {
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .offer {
+        min-height: 240px;
+
+        .tShirt {
+            left: 27%;
+            top: 130px;
+        }
+    }
+}

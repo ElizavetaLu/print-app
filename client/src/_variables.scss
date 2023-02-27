@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+
+$main-light_text-color: #fff;
+$main-dark_text-color: #333333;
+$main_blue: #4EA9FD;
+$active_bg-color: #2A89E1;
+
+$light-border-color: rgba(51, 51, 51, 0.08);
+$border-color: #EFEFEF;
+$dark-border-color: #C7C7C7;
+
+
+$padding-from-top: 220px;
+
+
+$padding_width-940: 84.5px 0px 56px;
+
+@mixin container {
+    max-width: 1106px;
+    padding: 0px 167px;
+    margin: 0 auto;
+}
+
+@mixin h1_font() {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+@mixin h2_font() {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+@mixin h3_font() {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+@mixin h4_font() {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+
+@mixin plain-text_font($weight) {
+    font-size: 16px;
+    font-weight: $weight;
+    line-height: 23.12px;
+}
+
+
+@mixin flex_center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex_align-center() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex_column_left() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin button($bg-color, $text_color) {
+    cursor: pointer;
+    border: none;
+    background-color: $bg-color;
+    padding: 9px 32px;
+    border-radius: 4px;
+    color: $text_color;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28.9px;
+    letter-spacing: .2px;
+    white-space: nowrap;
+    transition: .2s;
+}
+
+$button-hover: -2px;
+$button-active: 0px;
+
+
+
+
+@mixin input() {
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(78, 169, 253, 0.3);
+    border-radius: 4px;
+    @include plain-text_font(400);
+    color: #333333;
+    padding: 4px 16px;
+    height: 40px;
+}
+
+@mixin input_placeholder() {
+    color: #9AC6EF;
+    opacity: 1;
+    @include plain-text_font(400);
+}
+
+@mixin cart_blocks() {
+    background: #FFFFFF;
+    box-shadow: 1px 2px 12px rgba(51, 51, 51, 0.1);
+    border-radius: 12px;
+    padding: 11px 32px;
+}
+
+
+
+@mixin will-move-right_animate() {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    transition: color .5s ease, padding .5s ease;
+}

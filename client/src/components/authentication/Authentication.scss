@@ -1,0 +1,236 @@
+@import "../../variables";
+
+.authentication {
+    margin: 0px auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        background-image: url("../../../public/images/authImg.png");
+        background-size: cover;
+
+        .content {
+            padding: 72px 134px 0px 73px;
+            @include flex_column_left;
+
+            .logo {
+                margin-bottom: 27px;
+                @include flex_center;
+
+                .logo-icon {
+                    width: 64px;
+                    height: 44px;
+                }
+            }
+
+            h3 {
+                @include h3_font;
+                color: $main-light_text-color;
+            }
+        }
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 38px 73px;
+
+        .link {
+            font-size: 16px;
+            font-weight: 400;
+
+            .auth_link {
+                display: inline-block;
+                margin-left: 7px;
+                font-weight: 500;
+                color: $main_blue;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            .auth_link:hover {
+                transform: translateY(-1.5px);
+            }
+
+            .auth_link:active {
+                transform: translateY(0px);
+            }
+        }
+
+
+        .popUp {
+            top: 60px;
+            right: 10px;
+        }
+
+        .form-container {
+            align-self: center;
+            min-width: 343px;
+
+            .form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .h4 {
+                    @include h4_font;
+                    margin-bottom: 24px;
+                }
+
+                .google-btn {
+                    .btn {
+                        cursor: pointer;
+                        width: 100%;
+                        padding: 6.5px 0px;
+                        @include flex_center;
+                        @include plain-text_font(500);
+                        background-color: #fff;
+                        border-radius: 4px;
+                        border: none;
+                        box-shadow: 1px 1px 5px rgb(226 226 226 / 61%);
+                        color: #333333;
+
+                        .g-icon {
+                            @include flex_center;
+                            margin-right: 10px;
+
+                            .g-img {
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .separator {
+                    @include flex_align-center;
+                    margin: 20px 0px;
+
+                    .hr {
+                        width: 100%;
+                        height: 1px;
+                        background-color: #DCDCDC;
+                    }
+
+                    .or {
+                        @include plain-text_font(500);
+                        color: #63626E;
+                        margin: 0px 15px
+                    }
+                }
+
+                .inputs-list {
+                    width: 100%;
+                    @include flex_column_left;
+
+                    .input-row {
+                        width: 100%;
+                        @include flex_column_left;
+                        box-sizing: border-box;
+                        margin-bottom: 20px;
+                        position: relative;
+
+                        .title {
+                            color: $main_blue;
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 17.34px;
+                            margin-left: 16px;
+                        }
+
+                        .auth-input {
+                            box-sizing: border-box;
+                            @include input;
+                        }
+
+                        .auth-input.invalid {
+                            border: 1px solid #FC3C3C;
+                        }
+
+                        ::placeholder {
+                            @include input_placeholder;
+                        }
+                    }
+                }
+
+                .auth-button {
+                    .btn-container {
+                        margin-top: 32px;
+
+                        .btn {
+                            @include button($main_blue, $main-light_text-color);
+                            width: 100%;
+                            padding: 6.5px 0px;
+                            height: 36px;
+                            @include plain-text_font(500);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error-message {
+    color: #FC3C3C;
+    @include plain-text_font(500);
+}
+
+@media screen and (max-width: 856px) {
+    .authentication {
+        @include flex_center;
+
+        .left {
+            display: none;
+        }
+
+        .right {
+            height: 100%;
+
+            .link {
+                display: none;
+            }
+
+            .form-container {
+                min-width: 100px;
+                width: 100%;
+                max-width: 600px;
+                height: 100%;
+
+                .form {
+                    height: 100%;
+                    justify-content: space-between;
+                    padding: 42px 0px;
+                    box-sizing: border-box;
+
+                    .h4 {
+                        display: none;
+                    }
+
+                    .google-btn {
+                        display: none;
+                    }
+
+                    .separator {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 404px) {
+    .authentication {
+        .right {
+            padding: 0px 16px;
+        }
+    }
+}

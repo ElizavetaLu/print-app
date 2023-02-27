@@ -1,0 +1,45 @@
+@import "../../../../variables";
+
+.products {
+    margin-top: 251px;
+
+    .h2 {
+        @include h2_font;
+        margin-bottom: 44px;
+    }
+
+    .products-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 36px 49px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products {
+        margin-top: 547px;
+
+        .h2 {
+            @include h4_font;
+            line-height: 80px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .products {
+        margin-top: 484px;
+        .products-list {
+            gap: 14px 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .products {
+        margin-top: 350px;
+    }
+}
+

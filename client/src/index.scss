@@ -1,0 +1,51 @@
+@import "./variables";
+
+html,
+body {
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+  color: $main-dark_text-color;
+  height: 100%;
+  accent-color: $main_blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+
+ul {
+  padding-left: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: $main-dark_text-color;
+  -webkit-transition: color .5s ease, padding .5s ease;
+  -moz-transition: color .5s ease, padding .5s ease;
+  transition: color .5s ease, padding .5s ease;
+}
+
+a:hover,
+a:focus {
+  color: $main_blue;
+}
+
+
+.btn:hover {
+  transform: translateY($button-hover);
+}
+
+.btn:active {
+  transform: translateY($button-active);
+}

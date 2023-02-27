@@ -1,0 +1,110 @@
+@import "../../../variables";
+
+.cart-hover {
+    min-width: 352px;
+    max-width: 352px;
+    position: absolute;
+    top: 50px;
+    right: -32px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 1px 2px 12px rgba(51, 51, 51, 0.2);
+    border-radius: 12px;
+    padding: 24px 26px;
+    display: flex;
+    flex-direction: column;
+
+    .items-list {
+        color: $main-dark_text-color;
+        max-height: 240px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .cart-item {
+            padding: 12px 0px;
+
+            .left {
+                .order-icon {
+                    margin-right: 12px;
+
+                    .order-img {
+                        max-width: 84px;
+                        max-height: 95px;
+                    }
+                }
+
+                .order-data {
+                    flex-direction: column-reverse;
+
+                    .text {
+                        margin-bottom: 10px;
+                    }
+
+                    .params {
+                        display: none;
+                    }
+                }
+            }
+
+            .right {
+                .amount {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .sub-total {
+        border-top: 1px solid #EFEFEF;
+        border-bottom: 1px solid #EFEFEF;
+        @include flex_align-center;
+        justify-content: space-between;
+        color: $main-dark_text-color;
+        padding: 14px 0px;
+        margin: 15px 0px;
+
+        .text {
+            @include plain-text_font(400);
+        }
+
+        .total {
+            @include plain-text_font(500);
+        }
+    }
+
+    .btn-container {
+        margin-right: 0px;
+
+        .btn {
+            width: 100%;
+            @include button(transparent, $main_blue);
+            border: 1px solid $main_blue;
+            @include plain-text_font(500);
+            transition: all .2s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: $main_blue;
+            color: $main-light_text-color;
+        }
+    }
+}
+
+.cart-hover:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #FFFFFF transparent;
+    top: -20px;
+    left: 235px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .cart-hover{
+        display: none;
+    }
+}

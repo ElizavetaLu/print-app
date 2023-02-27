@@ -1,0 +1,123 @@
+@import "../../../variables";
+
+
+.mob_header {
+    display: none;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 13px;
+    top: 27px;
+    cursor: pointer;
+
+    .eye-img {
+        width: 20px;
+        height: 18px;
+    }
+}
+
+.forgot-psw {
+    align-self: flex-end;
+    @include plain-text_font(500);
+    color: $main_blue;
+    border-bottom: 1px solid $main_blue;
+    margin-top: 10px;
+}
+
+.checkbox {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: #63626E;
+    @include plain-text_font(500);
+    letter-spacing: 0.02em;
+
+    .checkbox-input {
+        margin-right: 12px;
+    }
+}
+
+.google-btn_mobile {
+    display: none;
+}
+
+.link_mobile {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 856px) {
+
+    .mob_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            margin-bottom: 22px;
+
+            .logo-img {
+                width: 42.18px;
+                height: 29px;
+            }
+        }
+
+        .h3 {
+            @include h3_font;
+            white-space: nowrap;
+        }
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .btn-container {
+        margin-top: 0px;
+    }
+
+    .google-btn_mobile {
+        display: block;
+        margin: 16px 0px;
+
+        .btn {
+            cursor: pointer;
+            width: 100%;
+            padding: 6.5px 0px;
+            @include flex_center;
+            @include plain-text_font(500);
+            background-color: #fff;
+            border-radius: 4px;
+            border: none;
+            box-shadow: 1px 1px 5px rgb(226 226 226 / 61%);
+            color: #333333;
+
+            .g-icon {
+                @include flex_center;
+                margin-right: 10px;
+
+                .g-img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+
+    .link_mobile {
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+
+        span {
+            margin-left: 7px;
+            font-weight: 500;
+            color: $main_blue;
+            cursor: pointer;
+        }
+    }
+}

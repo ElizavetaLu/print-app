@@ -1,0 +1,164 @@
+@import "../../../variables";
+
+.bg-circles {
+    max-width: 1265.8px;
+    max-height: 1278.88px;
+
+    .bg-img {
+        position: relative;
+
+        .image {
+            position: absolute;
+        }
+
+        .image.cap {
+            top: 289px;
+            right: 905px;
+
+            .cap-img {
+                width: 276.76px;
+                height: 185.39px;
+            }
+        }
+
+        .image.t-shirt {
+            top: 629px;
+            right: 701px;
+            transform: rotate(-5.07deg);
+
+            .t-shirt-img {
+                width: 463px;
+                height: 529px;
+            }
+        }
+
+        .image.bag {
+            top: 808px;
+            right: 488px;
+
+            .bag-img {
+                height: 422px;
+            }
+        }
+
+        .circles {
+
+            .sixs {
+                background: rgba(78, 169, 253, 0.1);
+                width: 1265.8px;
+                height: 1278.88px;
+
+                .fifth {
+                    background: rgba(78, 169, 253, 0.2);
+                    width: 1095.72px;
+                    height: 1108.8px;
+
+                    .fourth {
+                        background: rgba(78, 169, 253, 0.3);
+                        width: 925.64px;
+                        height: 935.45px;
+
+                        .third {
+                            background: rgba(78, 169, 253, 0.4);
+                            width: 788.26px;
+                            height: 794.8px;
+
+                            .second {
+                                background: rgba(78, 169, 253, 0.6);
+                                width: 598.56px;
+                                height: 605.1px;
+
+                                .first {
+                                    width: 333.62px;
+                                    height: 336.89px;
+                                    background-color: #4EA9FD;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sixs,
+.fifth,
+.fourth,
+.third,
+.second,
+.first {
+    border-radius: 100%;
+    @include flex_center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .bg-circles {
+        width: 590.77px;
+        height: 596.88px;
+
+        .bg-img {
+            .image.cap {
+                top: 58px;
+                right: 231px;
+
+                .cap-img {
+                    width: 141.4px;
+                    height: 94.72px;
+                }
+            }
+
+            .image.t-shirt {
+                top: 171px;
+                right: 355px;
+
+                .t-shirt-img {
+                    width: 292.13px;
+                    height: 333.77px;
+                }
+            }
+
+            .image.bag {
+                top: 288px;
+                right: 196px;
+
+                .bag-img {
+                    height: 243.31px;
+                }
+            }
+
+            .circles {
+                .sixs {
+                    width: 590.77px;
+                    height: 596.88px;
+
+                    .fifth {
+                        width: 511.39px;
+                        height: 517.5px;
+
+                        .fourth {
+                            width: 432.01px;
+                            height: 436.59px;
+
+                            .third {
+                                width: 367.9px;
+                                height: 370.95px;
+
+                                .second {
+                                    width: 279.36px;
+                                    height: 282.41px;
+
+                                    .first {
+                                        width: 155.71px;
+                                        height: 157.23px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

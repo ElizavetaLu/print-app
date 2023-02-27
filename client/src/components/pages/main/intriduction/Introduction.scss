@@ -1,0 +1,49 @@
+@import "../../../../variables";
+
+.introduction {
+    max-width: 623px;
+    @include flex_column_left;
+
+    .h1 {
+        @include h1_font;
+    }
+
+    .text {
+        max-width: 474px;
+        margin-top: 24px;
+        @include plain-text_font(400)
+    }
+
+    .btn-container {
+        margin-top: 44px;
+
+        .btn {
+            @include button($main_blue, $main-light_text-color)
+        }
+    }
+}
+
+
+@media screen and (max-width: 630px) {
+    .introduction {
+        .h1 {
+            @include h2_font();
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .introduction {
+        .h1 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

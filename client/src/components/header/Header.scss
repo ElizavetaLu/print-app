@@ -1,0 +1,328 @@
+@import "../../variables";
+
+.header-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all .5s ease-in-out;
+
+    .belt {
+        padding: 10px 0px;
+        @include flex_center;
+        background-color: $main_blue;
+
+        .box-icon {
+            margin-right: 20px;
+            @include flex_center;
+
+            .box-img {
+                width: 28px;
+                width: 28px;
+            }
+        }
+
+        .text {
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: .2px;
+            color: $main-light_text-color;
+            line-height: 29px;
+        }
+    }
+
+    .container {
+        @include container;
+
+        .header {
+            padding: 24px 0px;
+            @include flex_align-center;
+            justify-content: space-between;
+
+            .left {
+                @include flex_align-center;
+
+                .logo-icon {
+                    @include flex_center;
+                    margin-right: 72px;
+
+                    .logo-img {
+                        width: 64px;
+                        height: 44px;
+                    }
+                }
+
+                .nav {
+                    display: flex;
+                    gap: 80px;
+
+                    .text-link {
+                        transition: 0.2s;
+
+                        .nav-item {
+                            cursor: pointer;
+                            display: inline;
+                            @include plain-text_font(400);
+                        }
+                    }
+
+                    .text-link:hover {
+                        transform: translateY(-1.5px);
+                    }
+
+                    .text-link:active {
+                        transform: translateY(0px);
+                    }
+
+                    .text-link.active {
+                        color: $main_blue;
+                    }
+                }
+
+                @media screen and (max-width: 867px) {
+                    .nav {
+                        display: none;
+                    }
+                }
+            }
+
+            .right {
+                @include flex_align-center;
+                position: relative;
+
+                .nav-menu {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 324px;
+                    min-width: 324px;
+                    height: 100%;
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    margin: 0;
+                    right: -367px;
+                    padding: 38px 19px;
+                    -webkit-transition: right 0.3s;
+                    -moz-transition: right 0.3s;
+                    transition: right 0.3s;
+                    background: #fff;
+                    z-index: 1000;
+
+                    .close {
+                        position: absolute;
+                        top: 38px;
+                        right: 19px;
+                        cursor: pointer;
+
+                        .close-img {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+
+                    .nav {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 32px;
+
+                        .nav-item {
+                            line-height: 2.5;
+                            opacity: 0;
+                            -webkit-transform: translateX(50%);
+                            -moz-transform: translateX(50%);
+                            -ms-transform: translateX(50%);
+                            transform: translateX(50%);
+                            -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+                            -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
+                            -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
+                            transition: opacity .5s .1s, transform .5s .1s;
+                        }
+                    }
+
+                    .btn-container {
+                        margin-right: 0px;
+
+                        .btn {
+                            @include button($main-light_text-color, $main_blue);
+                            border: 1px solid $main_blue;
+                            transition: all 0.2s ease-in-out;
+                        }
+
+                        .btn:hover {
+                            background-color: $main_blue;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .nav-menu.active {
+                    right: 0px;
+
+                    .nav {
+                        .nav-item {
+                            opacity: 1;
+                            -webkit-transform: translateX(0);
+                            -moz-transform: translateX(0);
+                            -ms-transform: translateX(0);
+                            transform: translateX(0);
+
+                            a {
+                                display: inline-block;
+                                position: relative;
+                                padding: 0;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 29px;
+                                width: 100%;
+                            }
+
+                            a:hover,
+                            a:focus {
+                                padding-left: 15px;
+                            }
+                        }
+
+                        .nav-item:nth-child(2) {
+                            -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
+                            transition: opacity .5s .2s, transform .5s .2s;
+                        }
+
+                        .nav-item:nth-child(3) {
+                            -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
+                            transition: opacity .5s .3s, transform .5s .3s;
+                        }
+
+                        .nav-item:nth-child(4) {
+                            -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
+                            transition: opacity .5s .4s, transform .5s .4s;
+                        }
+
+                        .nav-item:nth-child(5) {
+                            -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
+                            transition: opacity .5s .5s, transform .5s .5s;
+                        }
+
+                        .nav-item:nth-child(6) {
+                            -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
+                            transition: opacity .5s .6s, transform .5s .6s;
+                        }
+
+                        .nav-item:nth-child(7) {
+                            -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
+                            transition: opacity .5s .7s, transform .5s .7s;
+                        }
+                    }
+                }
+
+                .mask-content {
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 900;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(51, 51, 51, 0.5);
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                .mask-content.active {
+                    visibility: visible;
+                    opacity: 1;
+                    -webkit-transition: opacity .5s, visibility .5s;
+                    transition: opacity .5s, visibility .5s;
+                }
+
+                .btn-container {
+                    margin-right: 24px;
+
+                    .btn {
+                        @include button(transparent, $main_blue);
+                        border: 1.5px solid $main_blue;
+                    }
+                }
+
+                .cart-icon {
+                    @include flex_center;
+                    margin-right: 35px;
+                    cursor: pointer;
+                    position: relative;
+
+                    .circle-amount {
+                        @include flex_center;
+                        color: $main-light_text-color;
+                        font-size: 10px;
+                        width: 15px;
+                        height: 15px;
+                        border: 2px solid #fff;
+                        border-radius: 100%;
+                        background-color: $main_blue;
+                        position: absolute;
+                        top: -6px;
+                        right: -10px;
+                    }
+
+                    .cart-img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .menu-icon {
+                    cursor: pointer;
+                    @include flex_center;
+
+                    .menu-img {
+                        width: 24px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-wrapper.hide {
+    transform: translateY(-150px);
+}
+
+@media screen and (max-width: 940px) {
+    .header-wrapper {
+        .belt {
+            display: none;
+        }
+
+        .container {
+            .header {
+                padding: 20px 0px;
+
+                .left {
+                    .logo-icon {
+                        .logo-img {
+                            width: 42.18px;
+                            height: 29px;
+                        }
+                    }
+
+                    .nav {
+                        display: none;
+                    }
+                }
+
+                .right {
+                    .menu-icon {
+                        .menu-img {
+                            width: 28.8px;
+                            height: 19.2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "../../../variables";
+
+.forgot-password {
+    cursor: pointer;
+    margin-top: 8px;
+    align-self: flex-end;
+    text-decoration: underline;
+    color: $main_blue;
+    transition: .2s;
+}
+
+.forgot-password:hover {
+    color: $main-dark_text-color;
+}

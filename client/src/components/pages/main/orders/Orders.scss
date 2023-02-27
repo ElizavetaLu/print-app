@@ -1,0 +1,226 @@
+@import "../../../../variables";
+
+.orders {
+    margin-top: 189px;
+    @include flex_column_left;
+
+    .h2 {
+        @include h2_font;
+        margin-bottom: 44px;
+    }
+
+    .orders-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 21px 20px;
+
+        .img-container {
+            @include flex_center;
+
+            .photo {
+                width: 354px;
+                height: 354px;
+            }
+        }
+    }
+
+    .see-all {
+        cursor: pointer;
+        margin-top: 44px;
+        align-self: center;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $main_blue;
+        border-bottom: 2px solid $main_blue;
+        padding-bottom: 2px;
+    }
+
+    .cta-container {
+        width: 100%;
+        box-sizing: border-box;
+        @include flex_align-center;
+        justify-content: flex-end;
+        background: linear-gradient(118.39deg, #4EA9FD -29.01%, #2A89E1 125.57%);
+        border-radius: 24px;
+        padding: 39px 50px;
+        position: relative;
+        margin-top: 170px;
+
+        .tShirt {
+            position: absolute;
+            left: -47px;
+            top: -46px;
+            transform: rotate(-10.91deg);
+
+
+            .tShirt-img {
+                width: 310.06px;
+                height: 354.26px;
+            }
+        }
+
+        .info {
+            max-width: 493px;
+            margin-right: 61px;
+            color: $main-light_text-color;
+
+            .h2 {
+                margin-bottom: 12px;
+                @include h2_font;
+            }
+
+            .text {
+                @include plain-text_font(400);
+            }
+        }
+
+        .btn-container {
+            .btn {
+                @include button($main-light_text-color, $main-dark_text-color)
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .orders {
+        margin-bottom: 210px;
+
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 595px;
+
+            .tShirt {
+                left: 36%;
+                top: 351px;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 100%;
+                margin-right: 0px;
+                color: $main-light_text-color;
+
+                .h2 {
+                    max-width: 700px;
+                    text-align: center;
+                    margin-bottom: 14px;
+                }
+
+                .text {
+                    max-width: 500px;
+                }
+            }
+
+            .btn-container {
+                margin-top: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .orders {
+        margin-top: 0px;
+
+        .cta-container {
+            margin-top: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .orders {
+        .cta-container {
+            min-height: 595px;
+
+            .tShirt {
+                left: 31%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .orders {
+        .h2 {
+            @include h4_font;
+            line-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .cta-container {
+            .tShirt {
+                left: 23%;
+            }
+
+            .info {
+                .h2 {
+                    font-weight: 600;
+                    font-size: 58px;
+                    line-height: 70px;
+                }
+
+                .text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .orders {
+        .orders-list {
+            .img-container {
+                .photo {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .cta-container {
+            min-height: 472px;
+
+            .tShirt {
+                top: 303px;
+                left: 21%;
+
+                .tShirt-img {
+                    width: 100%;
+                    height: 265px;
+                }
+            }
+
+            .info {
+                .h2 {
+                    @include h3_font;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .orders {
+        .cta-container {
+            min-height: 524px;
+
+            .tShirt {
+                top: 348px;
+                left: 16%;
+            }
+        }
+
+    }
+}

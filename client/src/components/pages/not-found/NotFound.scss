@@ -1,0 +1,90 @@
+@import "../../../variables";
+
+.not-found {
+    position: relative;
+    padding-top: $padding-from-top;
+    padding-bottom: 120px;
+
+    .background {
+        position: absolute;
+        opacity: 0.6;
+        z-index: -10;
+        top: -600px;
+        left: 574px;
+    }
+
+    .content {
+        @include flex_column_left;
+
+        .err-code {
+            font-size: 300px;
+            line-height: 336px;
+            font-weight: 500;
+        }
+
+        .err-text {
+            @include h2_font;
+            margin-bottom: 10px
+        }
+
+        .text {
+            @include h4_font;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+
+            .btn {
+                @include button($main_blue, $main-light_text-color)
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .not-found {
+        padding: $padding_width-940;
+
+        .background {
+            left: 240px;
+            top: -666px;
+        }
+
+        .content {
+            .err-code {
+                font-size: 200px;
+                line-height: 236px;
+            }
+
+            .err-text {
+                @include h3_font;
+            }
+
+            .text {
+                @include plain-text_font(500);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .not-found {
+        padding: $padding_width-940;
+
+        .background {
+            left: 176px;
+            top: -281px;
+        }
+
+        .content {
+            .err-code {
+                font-size: 150px;
+                line-height: 180px;
+            }
+
+            .err-text {
+                @include h4_font;
+            }
+        }
+    }
+}

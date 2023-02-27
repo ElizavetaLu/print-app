@@ -1,0 +1,72 @@
+@import "../../../../variables";
+
+.select-color {
+    margin-left: 42px;
+
+    .text {
+        margin-bottom: 18px;
+    }
+
+    .colors-list {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+
+        .color-container {
+            border-radius: 100%;
+            width: 24px;
+            height: 24px;
+            @include flex_center;
+
+            .color {
+                border-radius: 100%;
+                cursor: pointer;
+                width: 22px;
+                height: 22px;
+                transition: 0.2s;
+            }
+
+            .color:hover {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .color-container:nth-last-child(2) {
+            .color {
+                width: 21px;
+                height: 21px;
+                border: 1px solid #C7C7C7;
+            }
+        }
+
+        .color-container.active:nth-last-child(2) {
+            .color {
+                border: none;
+            }
+        }
+
+        .color-container:nth-last-child(2):hover {
+            .color {
+                width: 23px;
+                height: 23px;
+            }
+        }
+
+        .color-container.active {
+            border: 2px solid $main_blue;
+
+            .color {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .select-color {
+        margin-left: 0px;
+        margin-bottom: 16px;
+    }
+}

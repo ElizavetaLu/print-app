@@ -1,0 +1,43 @@
+@import "../../../../../variables";
+
+.amount {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #DFF0FF;
+    border-radius: 20px;
+    padding: 0px 16px;
+    margin-right: 16px;
+
+    .scale {
+        @include flex_center;
+        cursor: pointer;
+
+        .scale-img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .amount-input {
+        max-width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #DFF0FF;
+        @include plain-text_font(600);
+        color: $main_blue;
+        text-align: center;
+        outline: none;
+        margin: 0px 5px;
+    }
+
+    .amount-input::-webkit-outer-spin-button,
+    .amount-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+}
